@@ -23,7 +23,7 @@
             selected = false;
         for (i=modals.length-1; i>=0; i--) {
           if (modals[i].$blocker) {
-            modals[i].$blocker.toggleClass('current',!selected).toggleClass('behind',selected);
+            modals[i].$blocker.toggleClass('jqmodal-current',!selected).toggleClass('jqmodal-behind',selected);
             selected = true;
           }
         }
@@ -115,7 +115,7 @@
     block: function() {
       this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
       this.$body.css('overflow','hidden');
-      this.$blocker = $('<div class="' + this.options.blockerClass + ' blocker current"></div>').appendTo(this.$body);
+      this.$blocker = $('<div class="' + this.options.blockerClass + ' jqmodal-blocker jqmodal-current"></div>').appendTo(this.$body);
       selectCurrent();
       if(this.options.doFade) {
         this.$blocker.css('opacity',0).animate({opacity: 1}, this.options.fadeDuration);
@@ -139,7 +139,7 @@
     show: function() {
       this.$elm.trigger($.modal.BEFORE_OPEN, [this._ctx()]);
       if (this.options.showClose) {
-        this.closeButton = $('<a href="#close-modal" rel="modal:close" class="close-modal ' + this.options.closeClass + '">' + this.options.closeText + '</a>');
+        this.closeButton = $('<a href="#close-modal" rel="modal:close" class="jqmodal-close-modal ' + this.options.closeClass + '">' + this.options.closeText + '</a>');
         this.$elm.append(this.closeButton);
       }
       this.$elm.addClass(this.options.modalClass).appendTo(this.$blocker);
@@ -206,9 +206,9 @@
     clickClose: true,
     closeText: 'Close',
     closeClass: '',
-    modalClass: "modal",
+    modalClass: "jqmodal-modal",
     blockerClass: "jquery-modal",
-    spinnerHtml: '<div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div>',
+    spinnerHtml: '<div class="jqmodal-rect1"></div><div class="jqmodal-rect2"></div><div class="jqmodal-rect3"></div><div class="jqmodal-rect4"></div>',
     showSpinner: true,
     showClose: true,
     fadeDuration: null,   // Number of milliseconds the fade animation takes.
