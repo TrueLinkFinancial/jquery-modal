@@ -17,7 +17,7 @@
   vertical-align: middle;
   margin-right: -0.05em;
 }
-.jqmodal-blocker.behind {
+.jqmodal-blocker.jqmodal-behind {
   background-color: transparent;
 }
 .jqmodal-modal {
@@ -82,17 +82,17 @@
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
 
-.jqmodal-modal-spinner .rect2 {
+.jqmodal-modal-spinner .jqmodal-rect2 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
 
-.jqmodal-modal-spinner .rect3 {
+.jqmodal-modal-spinner .jqmodal-rect3 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
 
-.jqmodal-modal-spinner .rect4 {
+.jqmodal-modal-spinner .jqmodal-rect4 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
